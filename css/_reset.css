@@ -1,0 +1,31 @@
+@charset "UTF-8";
+*{margin:0;padding:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+body{-webkit-text-size-adjust:none}
+ul,ol{list-style:none}
+button{-webkit-border-radius:0;border-radius:0;background-color:transparent;cursor:pointer}
+a,a:hover,a:active,a:focus{text-decoration:none}
+em,address{font-style:normal}
+table{border-collapse:collapse;border-spacing:0}
+iframe,fieldset,img{border:0}
+textarea{resize:none}
+input[type="button"],input[type="email"],input[type="number"],input[type="password"],input[type="reset"],input[type="search"],input[type="submit"],input[type="tel"],input[type="text"],select,textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none}
+input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+img{vertical-align:top}
+hr{display:none}
+button{box-shadow: none;border: none}
+
+/* font rule */
+body,table,input,textarea,select,button,th,td,input,select,textarea,th,td,p,dl,dt,dd,li,pre{
+    font-family: Lato, -apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, Roboto, Tahoma, sans-serif;
+
+}
+
+/* Global class */
+.for-a11y{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;clip:rect(0 0 0 0)}
+
+/* layout */
+#wrapper{display: block; width: 100%;}
+#header{display: block;width: 100%;padding: 0 40px;border-bottom: 1px solid #ddd;}
+#container{display: block;width: 100%;min-height: calc(100vh - 280px);}
+#footer{display: block;width: 100%;background: #f7f7f7;padding: 40px;}

@@ -31,11 +31,17 @@
 }
 
 .section_jbfamily h2{
-  padding: 50px 0;
-  border-bottom: 1px solid black;
-  margin-left: 200px;
-  margin-right: 200px;
   font-size: 26px;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.section_jbfamily h2:after{
+  content: "";
+  display: block;
+  width: 200px;
+  border-bottom: 1px solid black;
+  margin: 20px auto;
 }
 
 .section_jbfamily .title strong{
@@ -71,10 +77,18 @@
   margin-bottom: 5px;
 }
 
+.card_container .card .textcontainer h3:after {
+  content: "";
+  display: block;
+  width: 60px;
+  border-bottom: 1px solid black;
+  margin: 10px auto;
+}
+
 .card_container .card .textcontainer p{
   font-size: 13px;
-  font: Lato;
-  margin-top: 5px;
+  font-family: "Lato";
+  margin-top: 15px;
 }
 
 .border-line{

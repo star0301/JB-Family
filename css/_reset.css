@@ -26,6 +26,6 @@ body,table,input,textarea,select,button,th,td,input,select,textarea,th,td,p,dl,d
 
 /* layout */
 #wrapper{display: block; width: 100%;}
-#header{display: block;width: 100%;padding: 0 40px;border-bottom: 1px solid #ddd;}
+#header{display: block;width: 100%;padding: 0 40px;/* border-bottom: 1px solid #ddd; */position: fixed;top: 0;left: 0;background: rgba(255,255,255,0.8);z-index: 100;}
 #container{display: block;width: 100%;min-height: calc(100vh - 280px);}
 #footer{display: block;width: 100%;background: #f7f7f7;padding: 40px;}

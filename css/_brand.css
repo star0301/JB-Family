@@ -1,0 +1,290 @@
+.section_brand{
+    width:100%;
+    display: block;
+    margin-bottom: 100px;
+}
+.section_brand .section_title{
+    margin-bottom: 40px;
+}
+
+.section_brand .section_center >  strong{
+    display: block;
+    width: 100%;
+    font-size: 23px;
+    text-align: center;
+    color: #555;
+    font-weight: 200;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 40px 0;
+}
+.section_brand .section_center > span{
+    text-align: center;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 40px;
+}
+
+
+.section_brand .brand_list{
+    width:100%;
+    display: block;
+    overflow: auto;
+    height: auto;
+}
+.section_brand .brand_list li{
+    float:left;
+    width:33.3%;
+    position: relative;
+}
+.section_brand .brand_list li .card_menu img{
+    width: 100%;
+}
+.section_brand .brand_list li .card_menu .tit{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+    padding:20px;
+}
+.section_brand .brand_list li .card_menu a{
+    visibility: visible;
+    animation-delay: 0.5s;
+    animation-name: fadeIn;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.section_brand .brand_list li .card_menu a img{
+    /*opacity: 0.15;*/
+    -moz-backface-visibility: hidden;
+
+}
+
+.section_brand .brand_list li .card_menu a:hover{
+    color: #d2b356;
+
+}
+.section_brand .brand_list li .card_menu a:hover:before {
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+}
+
+.section_brand .brand_list li .card_menu a:before {
+    font-size: 4.2em;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    content: "+";
+    width: 70px;
+    height: 70px;
+    border-radius: 100em;
+    display: block;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    line-height: 72px;
+    margin: -35px 0 0 -35px;
+    opacity: 0;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    transition: all .2s linear;
+    vertical-align: middle;
+    z-index: 3;
+}
+.section_brand .brand_list li .card_menu a:after {
+    content: "";
+    background: #000;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    transition: all .2s linear;
+    vertical-align: middle;
+    z-index: 2;
+}
+.section_brand .brand_list li .card_menu a:hover:after {
+    opacity: 0.5;
+}
+
+.section_brand .brand_list li .popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+}
+.section_brand .brand_list li .popup.active{
+    display: block;
+}
+.section_brand .brand_list li .popup:before{
+    content: '';
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation-delay: 0.5s;
+    animation-name: fadeIn;
+
+}
+.section_brand .brand_list li .popup .popup_cont{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    height: 300px;
+    background: #fff;
+    margin-left: -500px;
+    margin-top: -150px;
+    text-align: left;
+    padding: 40px;
+}
+.section_brand .brand_list li .popup .popup_cont strong {
+    font-size: 22px;
+    line-height: 40px;
+}
+.section_brand .brand_list li .popup .popup_cont p{}
+
+.section_brand .brand_list li .popup .popup_cont .button {
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 10px;
+    position: absolute;
+    bottom: 40px;
+    width: 180px;
+}
+
+.section_brand .brand_list li .popup .popup_cont .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    color: #222;
+    font-size: 16px;
+    vertical-align: top;
+    line-height: 22px;
+    vertical-align: top;
+}
+
+.section_brand .brand_list li .popup .popup_cont .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+    font-size: 20px;
+    line-height: 1;
+    vertical-align: top;
+}
+
+.section_brand .brand_list li .popup .popup_cont .button:hover span {
+    padding-right: 15px;
+}
+
+.section_brand .brand_list li .popup .popup_cont .button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.section_brand .brand_list li .popup .popup_cont img {
+    float: right;
+    height: 100%;
+    width: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.section_brand .brand_list li .popup .popup_cont .close {
+    display: block;
+    position: absolute;
+    right: -33px;
+    top: -3px;
+    width: 32px;
+    height: 32px;
+    transition: transform .25s ease-in-out;
+    z-index: 1000;
+    font-size: 0;
+}
+.section_brand .brand_list li .popup .popup_cont .close:hover {
+    transform: rotate(180deg);
+}
+.section_brand .brand_list li .popup .popup_cont .close:before {
+    content: "";
+    position: absolute;
+    display: block;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    height: 0;
+    border-top: 2px solid rgba(255,255,255,1);
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+.section_brand .brand_list li .popup .popup_cont .close:after {
+    content: "";
+    position: absolute;
+    display: block;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    height: 0;
+    border-top: 2px solid rgba(255,255,255,1);
+    transform: rotate(-45deg);
+    transform-origin: center;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+

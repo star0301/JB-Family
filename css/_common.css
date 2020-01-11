@@ -1,6 +1,14 @@
 /*header*/
 .header{
     height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.85);
+    z-index: 100;
+    width: 100%;
+    padding: 0 40px;
+    border-bottom: 1px solid #eee;
 }
 .header h1.logo{
     display: inline-block;
@@ -32,6 +40,10 @@
     height: 80px;
     line-height: 80px;
     padding: 0 20px;
+    position: relative;
+}
+.header .gnb li .link:hover{
+    color: #000;
 }
 .header .gnb li .link .text{
     font-size: 12px;
@@ -51,6 +63,18 @@
     bottom: -1px;
     left:0;
 }
+
+.header .gnb li .link:hover:before{
+    content:'';
+    background:red;
+    width:100%;
+    height: 1px;
+    display:block;
+    position:absolute;
+    bottom: -1px;
+    left:0;
+}
+
 
 /*footer*/
 .footer{
@@ -109,8 +133,22 @@
     margin-top: 10px;
 }
 
-.section_title{
-    font-size: 20px;
-    font-weight: bold;
-}
 
+
+/*common layout*/
+.section{
+    padding: 100px 0;
+    border-bottom:1px solid #eee;
+}
+.section .section_title{
+    font-size: 22px;
+    text-align: center;
+    font-weight: 400;
+    color: #444;
+    text-transform: uppercase;
+}
+.section .section_center{
+    width:1100px;
+    text-align: center;
+    margin:0 auto;
+}

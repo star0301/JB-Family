@@ -1,0 +1,37 @@
+.section_about{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.section_about img{
+    display: block;
+    margin: 0 auto;
+}
+.section_about strong{
+    display: block;
+    width: 100%;
+    font-size: 23px;
+    text-align: center;
+    color: #555;
+    font-weight: 200;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 40px 0;
+}
+.section_about span{
+    text-align: center;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 40px;
+}
+.section_about p{
+    display: block;
+    text-align: center;
+    padding: 40px 0;
+    width: 750px;
+    margin: 0 auto;
+    color: #555;
+    line-height: 30px;
+}

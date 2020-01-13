@@ -1,0 +1,119 @@
+.section_location{
+    padding-top: 50px;
+    border-bottom: 0;
+
+}
+.section_location .section_title{
+    margin-bottom: 40px;
+}
+.section_location .map_list{
+    width: 100%;
+    overflow: auto;
+    display: block;
+}
+.section_location .map_list .map_area{
+    float: left;
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    text-align: left;
+}
+.section_location .map_list .map_area .view{
+    width: 100%;
+    display: block;
+    height: auto;
+    /* width: 400px; */
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    background: #000;
+}
+.section_location .map_list .map_area .view:hover .pic{
+    z-index: 2;
+    opacity: 0.9;
+
+}
+.section_location .map_list .map_area .view .pic{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: auto;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    transition: all .2s linear;
+    opacity: 0;
+}
+.section_location .map_list .map_area .view .map{
+    position: static;
+    top: 0;
+    width: 100%;
+    left: 0;
+    /* max-width: 400px; */
+    height: auto;
+}
+.section_location .map_list .map_area .tit{
+    padding-top: 20px;
+    display: block;
+    font-size: 17px;
+    color: #444;
+}
+.section_location .map_list .map_area .address{
+    font-size: 14px;
+    color: #444;
+    line-height: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    display: block;
+}
+.section_location .map_list .map_area .address a:hover span{
+    font-weight: bold;
+}
+.section_location .map_list .map_area .address span{
+    color: #444;
+}
+.section_location .map_list .map_area .address .icon{
+    width: 14px;
+    vertical-align: top;
+    margin-top: 7px;
+}
+.section_location .map_list .map_area .info{
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    color: #444;
+}
+.section_location .map_list .map_area .info span{
+    display:block;
+}
+
+
+
+@media (max-width: 1000px) {
+    .section_location{
+        width:100%;
+        display: block;
+        margin-bottom: 100px;
+    }
+    .section_location .section_title{
+        margin-bottom: 20px;
+    }
+    .section_location .map_list .map_area {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0 5px;
+        float: none;
+        margin-bottom: 120px;
+    }
+
+    .section_location .map_list li .card_menu .tit {
+    }
+    .section_location .map_list li .card_menu .menu_name {
+        font-size: 15px;
+        padding: 10px 0;
+    }
+
+
+}

@@ -35,6 +35,9 @@
     color: #555;
     line-height: 30px;
 }
+.section_about img.photo {
+    width: 80%;
+}
 
 @media (max-width: 1000px) {
     .section_about{}

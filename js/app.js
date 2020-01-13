@@ -17,7 +17,7 @@ $(window).load(function () { // makes sure the whole site is loaded
         });
 
         var mySwiper = new Swiper ('.section_instargram .swiper-container', {
-            slidesPerView: 4,
+            slidesPerView: 2,
             spaceBetween: 30,
 
             navigation: {
@@ -30,7 +30,7 @@ $(window).load(function () { // makes sure the whole site is loaded
             },
             breakpoints: {
                 780: {
-                    slidesPerView: 1,
+                    slidesPerView: 2,
                     spaceBetween: 0
                 }
             }

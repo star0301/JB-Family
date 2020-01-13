@@ -60,6 +60,7 @@
     width: 200px;
     border-bottom: 1px solid black;
     margin: 20px auto;
+    margin-bottom: 50px;
 }
 
 .section_jbfamily .title strong{
@@ -67,10 +68,18 @@
 }
 
 .section_jbfamily .intro{
-    padding: 0;
+    padding: 50px;
     margin-bottom: 80px;
+    font-family: 'Noto Serif';
+    font-style: italic;
+    color : #555555;
     font-size: 26px;
     text-align: center;
+}
+
+.section_jbfamily .intro_img{
+  width: 26px;
+  height: 20px;
 }
 
 .card_container{
@@ -163,6 +172,7 @@
         font-size: 20px;
         font-weight: bold;
     }
+
     .section_jbfamily h2:after{
         width: 100px;
         margin: 10px auto;

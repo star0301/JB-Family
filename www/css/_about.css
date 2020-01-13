@@ -7,6 +7,13 @@
     display: block;
     margin: 0 auto;
 }
+
+.section_about .logo_img{
+  display: block;
+  height: 170px;
+  margin: 0 auto;
+}
+
 .section_about strong{
     display: block;
     width: 100%;
@@ -20,6 +27,7 @@
     margin-bottom: 40px;
     padding: 40px 0;
 }
+
 .section_about span{
     text-align: center;
     font-size: 13px;
@@ -29,11 +37,13 @@
 .section_about p{
     display: block;
     text-align: center;
-    padding: 40px 0;
+    padding: 20px 0;
+    padding-bottom: 150px;
     width: 750px;
     margin: 0 auto;
     color: #555;
     line-height: 30px;
+    font-size: 13px;
 }
 .section_about img.photo {
     width: 80%;

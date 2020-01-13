@@ -27,6 +27,12 @@ $(window).load(function () { // makes sure the whole site is loaded
             scrollbar: {
                 el: '.swiper-scrollbar',
                 hide: true,
+            },
+            breakpoints: {
+                780: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                }
             }
         })
     }
@@ -42,5 +48,10 @@ $( ".section_brand .card_menu").click(function() {
 
 $( ".section_brand .popup .close").click(function() {
     $(this).closest('li').find('.popup').removeClass("active");
+});
+
+$( ".menu-trigger.mobile_gnb").click(function() {
+    $(this).toggleClass("active");
+    $(".gnb").toggleClass("active");
 });
 

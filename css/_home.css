@@ -148,3 +148,66 @@
 }
 
 
+@media (max-width: 1000px) {
+    .section_slide{
+        height:300px;
+    }
+    .section_slide .swiper-container {
+        height:300px;
+    }
+    .section_slide .swiper-container .background-img{
+        height:300px;
+    }
+
+    .section_jbfamily h2{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .section_jbfamily h2:after{
+        width: 100px;
+        margin: 10px auto;
+    }
+    .section_jbfamily .intro{
+        font-size: 13px;
+        margin-bottom: 40px;
+        padding: 0 20px;
+    }
+    .section_jbfamily .card_container{
+        margin: 0;
+        display: block;
+        flex-direction: unset;
+        padding: 0 40px;
+    }
+    .section_jbfamily .card_container .card{
+        margin: 0;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    .section_jbfamily .card_container .card .text_container{
+        padding: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.5);
+        height: 100%;
+        width: 100%;
+    }
+
+    .section_jbfamily .card_container .card .text_container h3{
+        font-size: 16px;
+        color: #fff;
+        padding-top: 20%;
+    }
+    .section_jbfamily .card_container .card .text_container h3:after{
+        margin: 4px auto;
+        border-color: #fff;
+    }
+    .section_jbfamily .card_container .card .text_container p{
+        margin-top: 4px;
+        color: #fff;
+    }
+    .section_instargram{
+        margin-bottom: 40px;
+        border-bottom: 0;
+    }
+}

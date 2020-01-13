@@ -35,3 +35,26 @@
     color: #555;
     line-height: 30px;
 }
+
+@media (max-width: 1000px) {
+    .section_about{}
+    .section_about img{
+        width: 130px;
+    }
+    .section_about img.photo {
+        width: 100%;
+    }
+    .section_about strong{
+        margin: 0;
+        padding: 10px 0;
+        font-size: 16px;
+    }
+    .section_about span{
+        font-size: 14px;
+        margin: 4px;
+    }
+    .section_about p{
+        width: 100%;
+        text-align: center;
+    }
+}

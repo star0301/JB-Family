@@ -7,19 +7,7 @@
     margin-bottom: 40px;
 }
 
-.section_brand .section_center >  strong{
-    display: block;
-    width: 100%;
-    font-size: 23px;
-    text-align: center;
-    color: #555;
-    font-weight: 200;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 40px 0;
-}
+
 .section_brand .section_center > span{
     text-align: center;
     font-size: 13px;

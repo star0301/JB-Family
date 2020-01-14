@@ -48,19 +48,22 @@
 }
 
 .section_jbfamily h2{
-    font-size: 26px;
+    font-size: 30px;
     text-align: center;
+    font-family: 'Lato';
     font-weight: 400;
+    margin-bottom: 10px;
     color: #444;
 }
 
-.section_jbfamily h2:after{
-    content: "";
-    display: block;
-    width: 200px;
-    border-bottom: 1px solid black;
-    margin: 20px auto;
-    margin-bottom: 50px;
+.section_jbfamily .international:after{
+  content: "";
+  display: block;
+  width: 250px;
+  border-bottom: 1px solid black;
+  margin: 20px auto;
+  margin-top: 15px;
+  margin-bottom: 50px;
 }
 
 .section_jbfamily .title strong{

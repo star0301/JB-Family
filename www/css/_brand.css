@@ -2,6 +2,7 @@
     width:100%;
     display: block;
     margin-bottom: 100px;
+    border-bottom: 0;
 }
 .section_brand .section_title{
     margin-bottom: 40px;
@@ -26,6 +27,14 @@
     float:left;
     width:33.3%;
     position: relative;
+    margin-bottom: 20px;
+}
+.section_brand .brand_list li .card_menu{
+    padding: 0 40px;
+}
+.section_brand .brand_list li .tit{
+    font-size: 18px;
+    color: #555;
 }
 .section_brand .brand_list li .card_menu img{
     width: 100%;

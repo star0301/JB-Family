@@ -31,7 +31,7 @@ $(window).load(function () { // makes sure the whole site is loaded
             breakpoints: {
                 780: {
                     slidesPerView: 2,
-                    spaceBetween: 0
+                    spaceBetween: 10
                 }
             }
         })

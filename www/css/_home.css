@@ -48,22 +48,22 @@
 }
 
 .section_jbfamily h2{
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
-    font-family: 'Lato';
     font-weight: 400;
     margin-bottom: 10px;
     color: #444;
+    font-family: 'Dancing Script';
 }
 
 .section_jbfamily .international:after{
-  content: "";
-  display: block;
-  width: 250px;
-  border-bottom: 1px solid black;
-  margin: 20px auto;
-  margin-top: 15px;
-  margin-bottom: 50px;
+    content: "";
+    display: block;
+    width: 250px;
+    border-bottom: 1px solid black;
+    margin: 20px auto;
+    margin-top: 15px;
+    margin-bottom: 50px;
 }
 
 .section_jbfamily .title strong{
@@ -81,8 +81,8 @@
 }
 
 .section_jbfamily .intro_img{
-  width: 26px;
-  height: 20px;
+    width: 26px;
+    height: 20px;
 }
 
 .card_container{
@@ -102,7 +102,7 @@
 .card_container .card .img{
     width:100%;
     height:auto;
-     -webkit-transform: scale(1);
+    -webkit-transform: scale(1);
     -webkit-transition: all .4s cubic-bezier(.555,.205,.295,.975);
     -ms-transform: scale(1);
     -ms-transition: all .4s cubic-bezier(.555,.205,.295,.975);
@@ -158,7 +158,10 @@
     position: static !important;
     margin-top: 20px;
 }
-
+.section_instargram .swiper-slide img{
+    width: 100%;
+    height: auto;
+}
 
 @media (max-width: 1000px) {
     .section_slide{
@@ -172,7 +175,7 @@
     }
 
     .section_jbfamily h2{
-        font-size: 20px;
+        font-size: 30px;
         font-weight: bold;
     }
 
@@ -209,15 +212,26 @@
     .section_jbfamily .card_container .card .text_container h3{
         font-size: 16px;
         color: #fff;
-        padding-top: 20%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -30px;
+        padding: 0 20px;
+        text-align: center;
+        width: 100%;
     }
     .section_jbfamily .card_container .card .text_container h3:after{
         margin: 4px auto;
         border-color: #fff;
     }
     .section_jbfamily .card_container .card .text_container p{
-        margin-top: 4px;
         color: #fff;
+        position: absolute;
+        top: 50%;
+        margin-top: 0px;
+        left: 0;
+        width: 100%;
+        padding: 0 20px;
     }
     .section_instargram{
         margin-bottom: 40px;

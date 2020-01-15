@@ -31,7 +31,7 @@
 
 <body>
   <a>여기는 메일이 정확히 가는 영역</a>
-  <form id="contact-form">
+  <form id="contact-form1">
     <!-- 아래 input은 보낼 시 꼭 필요함 -->
     <input type="hidden" name="contact_number">
     <label>Name</label> <input type="text" name="sender">
@@ -42,43 +42,51 @@
 
   <br><br>
 
-  <a>Form 태그를 DIV로 감싼 영역 (가질않는다.)</a>
+  <a>Form 태그를 DIV로 감싼 영역 (id값 바꾸면 보내짐)</a>
   <div class="form-group">
-    <form id="contact-form">
+    <form id="contact-forgm">
       <!-- 아래 input은 보낼 시 꼭 필요함 -->
       <input type="hidden" name="contact_number">
-      <label>Name</label> <input type="text" name="sender">
+      <div class="form-group">
+        <label for="name" class="control-label">Name</label>
+        <input type="text" class="form-control" name="sender" placeholder="" value="" autocomplete="off">
+      </div>
       <label>Mobile</label> <input type="text" name="mobile">
-      <label>E-mail</label> <input type="text" name="email">
+      <div class="test">
+        <label>E-mail</label> <input type="text" name="email">
+      </div>
       <label>Message</label> <textarea name="message_html"></textarea>
-      <input type="submit" value="Send"> </form>
+      <input type="submit" value="Send">
+    </form>
   </div>
 
+
+
   <br><br>
-
-  <form id="contact-form">
-    <!-- 아래 input은 보낼 시 꼭 필요함 -->
-    <input type="hidden" name="contact_number">
-    <div class="form-group">
-      <label for="name" class="control-label">Name</label>
-      <input type="text" class="form-control" name="sender" autocomplete="off">
-    </div>
-    <div class="form-group">
-      <label for="name" class="control-label">Mobile</label>
-      <input type="text" class="form-control" name="mobile" autocomplete="off">
-    </div>
-    <div class="form-group">
-      <label for="name" class="control-label">E-mail</label>
-      <input type="text" class="form-control" name="email" autocomplete="off">
-    </div>
-    <div class="form-group">
-      <label for="name" class="control-label">Contents</label>
-      <textarea class="form-control" name="message_html" rows="3" autocomplete="off"></textarea>
-    </div>
-    <input type="submit" value="Send">
-
-  </form>
-
+  <div class="form_area">
+    <form id="contact-form">
+      <input type="hidden" name="contact_number">
+      <div class="form-group">
+        <label for="name" class="control-label">Name</label>
+        <input type="text" class="form-control" name="sender" placeholder="" value="" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="name" class="control-label">Mobile</label>
+        <input type="text" class="form-control" name="mobile" placeholder="" value="" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="name" class="control-label">E-mail</label>
+        <input type="text" class="form-control" name="email" placeholder="" value="" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="name" class="control-label">Contents</label>
+        <textarea class="form-control" name="message_html" rows="3" placeholder="" autocomplete="off"></textarea>
+      </div>
+      <div class="form-group text-full">
+        <input type="submit" value='SEND' class="btn btn-submit">
+      </div>
+    </form>
+  </div>
 
 
 </body>

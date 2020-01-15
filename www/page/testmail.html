@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact Form</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_VCU7jKJzQPME3vcytKpJj");
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        this.contact_number.value = Math.random() * 100000 | 0;
+
+        emailjs.sendForm('yandex', 'template_MHqHdJYp', this);
+      });
+    } 
+  </script>
+</head>
+
+<body>
+
+  <form id="contact-form">
+    <label>Name</label>
+    <input type="text" name="sender">
+    <label>From Name</label>
+    <input type="text" name="from_name">
+    <label>Mesage</label>
+    <textarea name="message_html"></textarea>
+    <input type="submit" value="Send">
+  </form>
+
+  <br><br>
+
+
+  <form id="contact-form1">
+
+    <div class="form-group">
+      <label for="name" class="control-label">Nggame</label>
+      <input type="text" class="form-control" name="sender" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="name" class="control-label">Mobile</label>
+      <input type="text" class="form-control" name="mobile" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="name" class="control-label">E-mail</label>
+      <input type="text" class="form-control" name="email" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="name" class="control-label">Contents</label>
+      <textarea class="form-control" name="message_html" rows="3" autocomplete="off"></textarea>
+    </div>
+    <input type="submit" value="Send">
+
+  </form>
+
+
+
+
+</body>
+
+</html>

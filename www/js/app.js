@@ -12,7 +12,7 @@ $(window).load(function () { // makes sure the whole site is loaded
                 el: '.swiper-pagination',
             },
             autoplay: {
-                delay: 5000,
+                delay: 2800,
             },
         });
 

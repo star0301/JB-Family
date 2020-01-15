@@ -9,9 +9,9 @@
 }
 
 .section_about .logo_img{
-  display: block;
-  height: 170px;
-  margin: 0 auto;
+    display: block;
+    height: 170px;
+    margin: 0 auto;
 }
 
 .section_about strong{
@@ -39,7 +39,6 @@
     text-align: center;
     padding: 20px 0;
     padding-bottom: 150px;
-    width: 750px;
     margin: 0 auto;
     color: #555;
     line-height: 30px;
@@ -52,7 +51,10 @@
 @media (max-width: 1000px) {
     .section_about{}
     .section_about img{
-        width: 130px;
+        width: 110px;
+        height:auto !important;
+        padding-bottom: 20px;
+        display: block;
     }
     .section_about img.photo {
         width: 100%;

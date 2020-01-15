@@ -19,6 +19,7 @@
     position: relative;
     padding: 0 20px;
     text-align: left;
+    margin-bottom: 80px;
 }
 .section_location .map_list .map_area .view{
     width: 100%;
@@ -88,6 +89,10 @@
 }
 .section_location .map_list .map_area .info span{
     display:block;
+}
+.section_location .map_list .map_area .info span  b{
+    width:  120px;
+    display: inline-block;
 }
 
 

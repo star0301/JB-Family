@@ -71,5 +71,7 @@
     .section_about p{
         width: 100%;
         text-align: center;
+        font-size: 14px;
+        letter-spacing: -1px;
     }
 }

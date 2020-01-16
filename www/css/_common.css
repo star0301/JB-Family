@@ -153,6 +153,13 @@
     margin:0 auto;
 }
 
+@media (max-width: 1000px) {
+
+    .section .section_title{
+        font-size: 24px;
+    }
+}
+
 /*mobile gnb */
 .gnb_mobile{
     display: none;
@@ -372,6 +379,7 @@
     }
     .header .gnb li .link .text{
         color:#fff;
+        font-size: 14px;
     }
 
     #footer {
@@ -446,3 +454,4 @@
 
 
 }
+

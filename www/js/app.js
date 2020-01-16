@@ -11,6 +11,10 @@ $(window).load(function () { // makes sure the whole site is loaded
             pagination: {
                 el: '.swiper-pagination',
             },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
             autoplay: {
                 delay: 2800,
             },
@@ -29,7 +33,7 @@ $(window).load(function () { // makes sure the whole site is loaded
                 hide: true,
             },
             breakpoints: {
-                780: {
+                1000: {
                     slidesPerView: 2,
                     spaceBetween: 10
                 }

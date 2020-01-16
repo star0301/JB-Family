@@ -75,6 +75,11 @@
     background: #f5333f;
     padding: 13px 0;
     color: #fff;
+    box-shadow: none;
+    border: none;
+}
+.section_contact .form .form_area .form-group.privacy{
+    display: none;
 }
 .section_contact .form .form_area .form-group.privacy .form-control{
     line-height: 18px;

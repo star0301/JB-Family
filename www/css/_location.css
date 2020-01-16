@@ -32,6 +32,17 @@
     position: relative;
     background: #000;
 }
+.section_location .map_list .map_area .view .soon{
+    font-family: "Dancing Script";
+    position: absolute;
+    left: 0;
+    font-size: 30px;
+    top: 50%;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: -13px;
+}
 .section_location .map_list .map_area .view:hover .pic{
     z-index: 2;
     opacity: 0.9;

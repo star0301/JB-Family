@@ -2,10 +2,10 @@
     width:100%;
     display: block;
     margin-bottom: 100px;
+    border-bottom: 0;
 }
 .section_menu .section_title{
     margin-bottom: 50px;
-    font-size: 25px;
 }
 
 .section_menu .section_center >  strong{

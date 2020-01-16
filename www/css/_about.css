@@ -44,6 +44,9 @@
     line-height: 30px;
     font-size: 13px;
 }
+.section_about p.mobile {
+    display: none;
+}
 .section_about img.photo {
     width: 100%;
 }
@@ -74,4 +77,11 @@
         font-size: 14px;
         letter-spacing: -1px;
     }
+    .section_about p.mobile{
+        display: block;
+    }
+    .section_about p.pc{
+        display: none;
+    }
+
 }

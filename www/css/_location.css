@@ -11,9 +11,11 @@
     margin: 25px 0;
     overflow: auto;
     display: block;
+    font-size: 0;
+    text-align: left;
 }
 .section_location .map_list .map_area{
-    float: left;
+    vertical-align: top;
     width: 50%;
     display: inline-block;
     position: relative;

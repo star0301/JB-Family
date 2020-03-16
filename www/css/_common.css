@@ -60,7 +60,7 @@
     height: 2px;
     display:block;
     position:absolute;
-    bottom: 0px;
+    bottom: 0;
     left:0;
 }
 
@@ -71,7 +71,7 @@
     height: 2px;
     display:block;
     position:absolute;
-    bottom: 0px;
+    bottom: 0;
     left:0;
 }
 
@@ -108,6 +108,10 @@
     margin-bottom: 10px;
     color: rgba(0, 0, 0, 0.74);
     text-decoration: none;
+    color:#666;
+}
+.footer .footer_contact a b{
+    color: #f2d520;
 }
 .footer .footer_info{
     float: right;
@@ -413,7 +417,6 @@
         font-family: 'cafe24';
         display: block;
         margin-bottom: 10px;
-        color: rgba(0, 0, 0, 0.74);
         text-decoration: none;
         padding-left: 60px;
     }

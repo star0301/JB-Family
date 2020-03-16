@@ -90,6 +90,7 @@
     float: left;
 }
 .footer .footer_logo .img_logo{
+    margin-top: 15px;
     width:100px;
     display: block;
 }
@@ -100,11 +101,13 @@
     margin-left: 200px;
 }
 .footer .footer_contact a{
-    font-size: 16px;
+    font-size: 45px;
+    font-family: 'cafe24';
+    font-weight: bold;
     display: block;
     margin-bottom: 10px;
-    color: #666;
-    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.74);
+    text-decoration: none;
 }
 .footer .footer_info{
     float: right;
@@ -406,11 +409,13 @@
         margin-left: 20px;
     }
     .footer .footer_contact a{
-        font-size: 11px;
+        font-size: 35px;
+        font-family: 'cafe24';
         display: block;
         margin-bottom: 10px;
-        color: #666;
-        text-decoration: underline;
+        color: rgba(0, 0, 0, 0.74);
+        text-decoration: none;
+        padding-left: 60px;
     }
     .footer .footer_info{
         float: none;

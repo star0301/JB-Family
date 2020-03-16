@@ -4,7 +4,8 @@
 <head lang="ko">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi, user-scalable=no">
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi, user-scalable=no">
   <!--Page Title-->
   <title>JB Family</title>
 
@@ -17,6 +18,12 @@
 
   <!-- Main CSS Files -->
   <link rel="stylesheet" href="../css/app.css">
+
+  <!-- Pop Up Script-->
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <style>
+
+  </style>
 
 </head>
 
@@ -33,8 +40,45 @@
   <!--End of Preloader-->
 
 
-  <div id="wrapper">
+  <!-- Popup Area-->
+  <div id="popup_mask"></div> <!-- 팝업 배경 DIV -->
+  <div id="popupDiv" class="popupDiv">
+    <!-- 팝업창 -->
+    <h2>공 지 사 항</h2>
+    <p>가맹점은 프랜차이즈 본사의 방향성과 <br>각 지점 점주분들의 방향성이 일치할 때 <br>성공적인 '상생'을 이뤄냅니다. </p>
+    <p>저희는 <br>전국의 왕비돈까스 지점대표님들 모두의 '성공'을 <br> 진심으로 바랍니다.</p>
+    <p>'왕비돈까스 레스토랑'은 각 도시에 <br> 'Only One: 1개점 운영외 절대 개설해주지 않는'<br>원칙을 갖고 있습니다.</p>
+    <p>이것이 브랜드 왕비돈까스의 경영철학 입니다.</p>
+    <p>원칙을 지켜가며 '성공'을 약속드립니다.<br><br></p>
+    <button id="popCloseBtn">close</button>
+  </div>
 
+  </div>
+
+  <script>
+
+    $(document).ready(function () {
+
+      $("#popupDiv").css({
+        "top": (($(window).height() - $("#popupDiv").outerHeight()) / 2 + $(window).scrollTop()) + "px",
+        "left": (($(window).width() - $("#popupDiv").outerWidth()) / 2 + $(window).scrollLeft()) + "px"
+        //팝업창을 가운데로 띄우기 위해 현재 화면의 가운데 값과 스크롤 값을 계산하여 팝업창 CSS 설정
+      });
+
+      $("#popCloseBtn").click(function (event) {
+        $("#popup_mask").css("display", "none"); //팝업창 뒷배경 display none
+        $("#popupDiv").css("display", "none"); //팝업창 display none
+        $("body").css("overflow", "auto");//body 스크롤바 생성
+      });
+
+    });
+
+  </script>
+
+  <!-- End of Popup Area-->
+
+
+  <div id="wrapper">
     <!--Header-->
     <header id="header">
       <div class="header">
@@ -102,8 +146,8 @@
           <!-- Add Pagination -->
           <div class="swiper-pagination"></div>
           <!-- Add Arrows -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div> -->
 
         </div>
       </section>
@@ -114,7 +158,7 @@
           <p class="international">I N T E R N A T I O N A L</p>
           <img class="intro_img" src='../images/common/quotation.png' art="" />
           <p class="intro">
-            For everyone, For comfortable, For proper meal
+            For everyone, For comfort, For proper meal
           </p>
 
           <div class="card_container">
@@ -127,7 +171,7 @@
               <div class="text_container">
                 <a href="brand.html">
                   <h3>JB's Brand</h3>
-                  <p>JB Family가 운영중인 브랜드를 알아보세요</p>
+                  <p>JB Family의 브랜드를 알아보세요</p>
                 </a>
               </div>
             </div>
@@ -139,7 +183,7 @@
               </div>
               <div class="text_container">
                 <a href="menu.html">
-                  <h3>Veriety Menu</h3>
+                  <h3>Menu Selection</h3>
                   <p>JB Family의 다양한 메뉴를 살펴보세요</p>
                 </a>
               </div>
@@ -209,7 +253,7 @@
           <img src="../images/common/footer_logo.png" alt="JB FAMILY" class="img_logo" />
         </div>
         <div class="footer_contact">
-          <a href="tel:1577-7012">가족점 문의</a>
+          <a href="tel:1577-7012">가족점 문의<br></a><a>1577 - 7012</a>
         </div>
         <div class="footer_info">
           <ul class="major_info">

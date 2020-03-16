@@ -1,0 +1,82 @@
+<html>
+
+<head>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <title>Home</title>
+
+  <style>
+    #popupDiv {
+      /* 팝업창 css */
+      top: 20px;
+      left: 20px;
+      position: absolute;
+      background: white;
+      width: 400px;
+      height: 400px;
+      display: block;
+      text-align: center;
+    }
+
+    .popupDiv p {
+      margin-top: 15px;
+    }
+
+    #popup_mask {
+      /* 팝업 배경 css */
+      position: fixed;
+      width: 100%;
+      height: 1000px;
+      top: 0px;
+      left: 0px;
+      display: block;
+      background-color: #000;
+      opacity: 0.8;
+    }
+
+    #popCloseBtn {
+      /* 팝업 버튼 css */
+      padding: 15px 30px;
+      align-items: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="popup_mask"></div> <!-- 팝업 배경 DIV -->
+  <div id="popupDiv" class="popupDiv">
+    <!-- 팝업창 -->
+    <h2>공 지 사 항</h2>
+    <p>가맹점은 오너의 방향성과 <br> 점주의 방향성이 같아야 합니다. </p>
+    <p>왕비돈까스 레스토랑은 각 도시에 <br> 매장 1개점 외에 가맹점을 절대 내주지 않습니다.</p>
+    <p>이것이 왕비돈까스 입니다.</p>
+    <p>브랜드대표 안성빈, 저는 소신이 있기에 지킵니다.</p>
+    <p>감사합니다.</p>
+    <button id="popCloseBtn">close</button>
+  </div>
+
+  </div>
+
+  <script>
+
+    $(document).ready(function () {
+
+      $("#popupDiv").css({
+        "top": (($(window).height() - $("#popupDiv").outerHeight()) / 2 + $(window).scrollTop()) + "px",
+        "left": (($(window).width() - $("#popupDiv").outerWidth()) / 2 + $(window).scrollLeft()) + "px"
+        //팝업창을 가운데로 띄우기 위해 현재 화면의 가운데 값과 스크롤 값을 계산하여 팝업창 CSS 설정
+      });
+
+      $("#popCloseBtn").click(function (event) {
+        $("#popup_mask").css("display", "none"); //팝업창 뒷배경 display none
+        $("#popupDiv").css("display", "none"); //팝업창 display none
+        $("body").css("overflow", "auto");//body 스크롤바 생성
+      });
+
+    });
+
+  </script>
+</body>
+
+</html>

@@ -103,3 +103,10 @@
     url('../fonts/dancing-script-v13-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
     url('../fonts/dancing-script-v13-latin-700.svg#DancingScript') format('svg'); /* Legacy iOS */
 }
+/* Cafe24 Font*/  
+@font-face {
+  font-family: 'cafe24';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Cafe24Dangdanghae.ttf');
+}

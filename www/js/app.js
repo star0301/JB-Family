@@ -16,7 +16,7 @@ $(window).load(function () { // makes sure the whole site is loaded
                 prevEl: '.swiper-button-prev',
             },
             autoplay: {
-                delay: 2800,
+                delay: 2300,
             },
         });
 

@@ -1,0 +1,48 @@
+
+-- 인스타 피드 불러오는데 필요한 정보들 --
+
+Instagram 앱ID : 3419173844799589  (Client ID)
+Instagram 앱 시크릿코드 : 2d936dd19121502470bf2f9ec43b1210
+
+
+왕비 공식인스타 정보
+{
+  "access_token": "IGQVJYOXZAKWHc5OFdybEFNNVIwMmk0OFdFWl9XTmhOUVBtSmFUaThYdWNsN3NwZA1NyQVRLQm43RXdnUXRtVFAyLTBjaTQ5d2tvdXQ2OWlza3pTTEI1emJnaDFrRmRiUzJlQmZAWTWJVY2JvNXNVMFRuM2tYLXhCc0J3UzdZA",
+  "user_id": 17841407321653863
+}
+
+
+
+-- 인스타 구현에 참고한 사이트 --
+
+https://playon.tistory.com/108
+
+
+
+-- 바꾼것들 --
+
+1. index.html 파일을 page 폴더에서 www로 옮겨왔습니다. href 링크들 전부 다 수정해놨습니다.
+(.htaccess 설정 파일로 어떻게든 진입로를 바꿔보려 했는데, 하다하다 안되서 포기)
+
+
+2. index.html을 index.php로 바꿨는데 인스타 구현 참고 사이트를 보다보니 php 확장자를 쓰길래 그렇게 했습니다.
+
+
+3. 현재 애를 먹고 있는 부분은 구체적으로...
+instagram.php 파일에 foreach가 시작되는 구문이 제대로 동작되지 않는걸로 보입니다.
+그래서 index.php 파일에서 44, 45번째 줄에 console.log로 response를 찍어보니
+
+ERROR : Unexpected token < in JSON at position 0
+
+으로 나오길래, 이걸 다시 추적해보니 Response에는 
+<br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/home/jbfamily/html/instagram.php</b> on line <b>45</b><br />
+
+라는 에러가 담겨서 넘어온걸 확인.
+
+
+이게 왜 넘어오는지를 현재 파악하지 못하고 이 에러는 내가 핸들링하기 어려운 부분이라고 파악
+
+포기하였습니다...........
+
+

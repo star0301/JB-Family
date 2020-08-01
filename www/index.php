@@ -1,68 +1,352 @@
-<!doctype html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-  <title>인스타그램 호출</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!DOCTYPE html>
+<html>
+
+<head lang="ko">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi, user-scalable=no">
+  <!--Page Title-->
+  <title>JB Family</title>
+
+  <!--Meta Keywords and Description-->
+  <meta name="keywords" content="돈까스,맥아더떡볶이,왕비돈까스,JB딜리버리">
+  <meta name="description" content="돈까스,맥아더떡볶이,왕비돈까스,JB딜리버리">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="../images/favicon.ico" title="Favicon" />
+
+  <!-- Main CSS Files -->
+  <link rel="stylesheet" href="../css/app.css">
+
+  <!-- Pop Up Script-->
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <style>
-    body {
-      background: #fafafa;
-    }
 
-    .playon-instagarm {
-      width: 800px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .instagram {
-      width: 250px;
-      margin-bottom: 30px;
-    }
-
-    .instagram-thum {
-      width:250px;
-      height:250px;
-      background-size:cover;
-    }
   </style>
+
 </head>
+
 <body>
 
-<!-- 인스타 사진이 들어가는 영역-->
-<div class="playon-instagarm"></div>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="status" class="la-ball-triangle-path">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!--End of Preloader-->
 
 
-<script>
-$(document).ready(function() {
-  $.ajax({
-    url: "instagram.php",
-    success: function (response) {
-      console.log("here is success...");
-      console.log(response);
-      var list = '';
-      var result = JSON.parse(response);
-      $.each(result, function(key, val) {
-        /*
-        val.username+
-        val.link+
-        val.thum+
-        val.text+
-        */
-        list += '<div class="instagram">'+
-        '<div class="instagram-thum" style="background:url('+val.thum+') no-repeat top center;"></div></a>'+
-        '</div>';
+  <!-- Popup Area-->
+  <div id="popup_mask"></div> <!-- 팝업 배경 DIV -->
+  <div id="popupDiv" class="popupDiv">
+    <!-- 팝업창 -->
+    <h2>공 지 사 항</h2>
+    <p>가맹점은 프랜차이즈 본사의 방향성과 <br>각 지점 점주분들의 방향성이 일치할 때 <br>성공적인 '상생'을 이뤄냅니다. </p>
+    <p>저희는 <br>전국의 왕비돈까스 지점대표님들 모두의 '성공'을 <br> 진심으로 바랍니다.</p>
+    <p>'왕비돈까스 레스토랑'은 각 도시에 <br> 'Only One: 1개점 운영외 절대 개설해주지 않는'<br>원칙을 갖고 있습니다.</p>
+    <p>이것이 브랜드 왕비돈까스의 경영철학 입니다.</p>
+    <p>원칙을 지켜가며 '성공'을 약속드립니다.<br><br></p>
+    <button id="popCloseBtn">close</button>
+  </div>
+
+  </div>
+
+  <script>
+
+    $(document).ready(function () {
+
+      $("#popupDiv").css({
+        "top": (($(window).height() - $("#popupDiv").outerHeight()) / 2 + $(window).scrollTop()) + "px",
+        "left": (($(window).width() - $("#popupDiv").outerWidth()) / 2 + $(window).scrollLeft()) + "px"
+        //팝업창을 가운데로 띄우기 위해 현재 화면의 가운데 값과 스크롤 값을 계산하여 팝업창 CSS 설정
       });
-      $('.playon-instagarm').append(list);
-    }
-  });
-});
-</script>
 
-<p>hh</p>
+      $("#popCloseBtn").click(function (event) {
+        $("#popup_mask").css("display", "none"); //팝업창 뒷배경 display none
+        $("#popupDiv").css("display", "none"); //팝업창 display none
+        $("body").css("overflow", "auto");//body 스크롤바 생성
+      });
+
+    });
+
+  </script>
+
+  <!-- End of Popup Area-->
+
+
+  <div id="wrapper">
+    <!--Header-->
+    <header id="header">
+      <div class="header">
+        <h1 class="logo">
+          <a href="//www.jbfamily.kr">
+            <img src="../images/common/logo.png" class="img_logo" alt="JB-Family">
+          </a>
+        </h1>
+        <div class="gnb_mobile">
+          <a class="menu-trigger mobile_gnb" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+        <ul class="gnb">
+          <!--활성화된 메뉴에 "active"클래스 추가 -->
+          <li>
+            <a href="page/about.html" class="link">
+              <span class="text">ABOUT</span>
+            </a>
+          </li>
+          <li>
+            <a href="page/brand.html" class="link">
+              <span class="text">BRAND</span>
+            </a>
+          </li>
+          <li>
+            <a href="page/menu.html" class="link">
+              <span class="text">MENU</span>
+            </a>
+          </li>
+          <li>
+            <a href="page/location.html" class="link">
+              <span class="text">location</span>
+            </a>
+          </li>
+          <li>
+            <a href="page/contact.html" class="link">
+              <span class="text">contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </header>
+    <!--//Header -->
+
+    <!--Main Content Area-->
+    <main id="container">
+      <section class="section_slide">
+        <!-- Swiper -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="background-img" style="background: url('../images/slideshow/index_slide1.jpg')"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="background-img" style="background: url('../images/slideshow/index_slide2.jpg')"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="background-img" style="background: url('../images/slideshow/index_slide3.JPG')"></div>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div> -->
+
+        </div>
+      </section>
+
+      <section class="section_jbfamily section">
+        <div class="section_center">
+          <h2 class="title"><strong>JB</strong> Family</h2>
+          <p class="international">I N T E R N A T I O N A L</p>
+          <img class="intro_img" src='../images/common/quotation.png' art="" />
+          <p class="intro">
+            For everyone, For comfort, For proper meal
+          </p>
+
+          <div class="card_container">
+            <div class="card">
+              <div class="image_container">
+                <a href="page/brand.html">
+                  <img class="img" src='../images/home/index_brand.jpg' alt="" />
+                </a>
+              </div>
+              <div class="text_container">
+                <a href="page/brand.html">
+                  <h3>JB's Brand</h3>
+                  <p>JB Family의 브랜드를 알아보세요</p>
+                </a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="image_container">
+                <a href="page/menu.html">
+                  <img class="img" src='../images/home/index_menu.jpg' alt="" />
+                </a>
+              </div>
+              <div class="text_container">
+                <a href="page/menu.html">
+                  <h3>Menu Selection</h3>
+                  <p>JB Family의 다양한 메뉴를 살펴보세요</p>
+                </a>
+              </div>
+
+            </div>
+            <div class="card">
+              <div class="image_container">
+                <a href="page/contact.html">
+                  <img class="img" src='../images/home/index_contact.jpg' alt="" />
+                </a>
+              </div>
+              <div class="text_container">
+                <a href="page/contact.html">
+                  <h3>Contact Us</h3>
+                  <p>JB Family의 가족점이 되어보세요</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--INSTAGRAM-->
+      <section class="section_instargram section">
+        <div class="section_center">
+          <h2 class="section_title">INSTARGRAM</h2>
+          <div class="div_instargram">
+            <?php
+                require_once( 'instagram_basic_display_api.php' );
+                $accessToken = 'IGQVJYRG54T1NxaXNySDJfMU95SkI1Uno0MHpQN1NsVkhqX2pBZAS1lOUhFV0xlQkx2cWtQN3dQWGR3OEFXakZATajY3emFPV0VSMFEwTnlXNWdXakdYUTZAhaVBwY3BsWl9fSF9CSjJGelhfNXREekhkaAZDZD';
+                $params = array(
+                    'get_code' => isset( $_GET['code'] ) ? $_GET['code'] : '',
+                    'access_token' => $accessToken,
+                    'user_id' => '17841407321653863'
+                );
+                $ig = new instagram_basic_display_api( $params );
+            ?>
+            <?php if ( $ig->hasUserAccessToken ) : ?>
+           	<?php $user = $ig->getUser(); ?>
+           	<?php $highlightedPostId = 'MEDIA-ID'; ?>
+           	<?php $usersMedia = $ig->getUsersMedia(); ?>
+
+           	<!-- POST 게시물 -->
+           	<div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <?php foreach ( $usersMedia['data'] as $post ) : ?>
+                        <li class="swiper-slide">
+                            <div>
+                                <?php if ( 'IMAGE' == $post['media_type'] || 'CAROUSEL_ALBUM' == $post['media_type']) : ?>
+                                    <div class="thumb" style="background:url(<?php echo $post['media_url']; ?>)"></div>
+                                <?php else : ?>
+                                    <video height="600" width="100%" controls>
+                                        <source src="<?php echo $post['media_url']; ?>">
+                                    </video>
+                                <?php endif; ?>
+                            </div>
+                            <div>
+                                <b class="caption">
+                                    <?php echo $post['caption']; ?>
+                                </b>
+                            </div>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+
+            <?php else : ?>
+               <div class="wait">
+                   <img src="../images/home/instargram.jpg" alt="" class="img" />
+                   <p>
+                     <img src="../images/home/icon.png" alt="" class="icon" />
+                     왕비돈까스 공식 인스타그램 서비스 예정중
+                   </p>
+                   <a href="<?php echo $ig->authorizationUrl; ?>">
+                       Authorize w/Instagram
+                   </a>
+               </div>
+            <?php endif; ?>
+          </div>
+
+          <!--          <div class="swiper-container">-->
+          <!--            <div class="swiper-wrapper">-->
+          <!--              <div class="swiper-slide">-->
+          <!--                <img src="../images/common/insta1.png" alt="" />-->
+          <!--              </div>-->
+          <!--              <div class="swiper-slide">-->
+          <!--                <img src="../images/common/insta2.png" alt="" />-->
+          <!--              </div>-->
+          <!--              <div class="swiper-slide">-->
+          <!--                <img src="../images/common/insta3.png" alt="" />-->
+          <!--              </div>-->
+          <!--              <div class="swiper-slide">-->
+          <!--                <img src="../images/common/insta4.png" alt="" />-->
+          <!--              </div>-->
+          <!--            </div>-->
+          <!--            &lt;!&ndash; Add Pagination &ndash;&gt;-->
+          <!--            <div class="swiper-pagination"></div>-->
+          <!--            &lt;!&ndash; Add Arrows &ndash;&gt;-->
+          <!--            <div class="swiper-button-next"></div>-->
+          <!--            <div class="swiper-button-prev"></div>-->
+          <!--            &lt;!&ndash; Add Scrollbar &ndash;&gt;-->
+          <!--            <div class="swiper-scrollbar"></div>-->
+          <!--          </div>-->
+
+        </div>
+      </section>
+    </main>
+    <!--//Main Content Area-->
+
+
+    <!--Footer-->
+    <footer id="footer">
+      <div class="footer">
+        <div class="footer_logo">
+          <img src="../images/common/footer_logo.png" alt="JB FAMILY" class="img_logo" />
+        </div>
+        <div class="footer_contact">
+          <a href="tel:1577-7012"><b>가족점 문의</b><br>1577 - 7012</a>
+        </div>
+        <div class="footer_info">
+          <ul class="major_info">
+            <li>
+              <span class="label">EMAIL</span>
+              <span class="text">luxury7749@naver.com</span>
+            </li>
+            <li>
+              <span class="label">ADDRESS</span>
+              <span class="text">인천광역시 남동구 서창남로 41 광명프라자 114호</span>
+            </li>
+            <li>
+              <span class="label">CALL</span>
+              <span class="text">1577 - 7012</span>
+            </li>
+          </ul>
+          <ul class="major_info company_info">
+            <li>
+              <span class="label">대표자</span>
+              <span class="text">안성빈</span>
+            </li>
+            <li>
+              <span class="label">사업자등록번호</span>
+              <span class="text">397-81-01479</span>
+            </li>
+          </ul>
+          <p class="copyright">
+            Copyright© 2020 JB FAMILY INTERNATIONAL. All right reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!--//Footer-->
+
+  </div>
+
+  <!-- Include JavaScript resources -->
+  <script src="../js/plugin/jquery.1.8.3.min.js"></script>
+  <script src="../js/plugin/swiper.min.js"></script>
+  <script src="../js/app.js"></script>
 
 </body>
+
 </html>

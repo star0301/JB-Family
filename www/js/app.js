@@ -26,15 +26,15 @@ $(window).load(function () { // makes sure the whole site is loaded
 
             navigation: {
                 nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                prevEl: '.swiper-button-prev'
             },
             scrollbar: {
                 el: '.swiper-scrollbar',
-                hide: true,
+                hide: true
             },
             breakpoints: {
                 1000: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 10
                 }
             }

@@ -231,20 +231,22 @@
                 <ul class="swiper-wrapper">
                     <?php foreach ( $usersMedia['data'] as $post ) : ?>
                         <li class="swiper-slide">
-                            <div>
-                                <?php if ( 'IMAGE' == $post['media_type'] || 'CAROUSEL_ALBUM' == $post['media_type']) : ?>
-                                    <div class="thumb" style="background:url(<?php echo $post['media_url']; ?>)"></div>
-                                <?php else : ?>
-                                    <video height="600" width="100%" controls>
-                                        <source src="<?php echo $post['media_url']; ?>">
-                                    </video>
-                                <?php endif; ?>
-                            </div>
-                            <div>
-                                <b class="caption">
-                                    <?php echo $post['caption']; ?>
-                                </b>
-                            </div>
+                            <a href="//www.instagram.com/queens_porkcutlet/">
+                                <div>
+                                    <?php if ( 'IMAGE' == $post['media_type'] || 'CAROUSEL_ALBUM' == $post['media_type']) : ?>
+                                        <div class="thumb" style="background:url(<?php echo $post['media_url']; ?>)"></div>
+                                    <?php else : ?>
+                                        <video height="600" width="100%" controls>
+                                            <source src="<?php echo $post['media_url']; ?>">
+                                        </video>
+                                    <?php endif; ?>
+                                </div>
+                                <div>
+                                    <b class="caption">
+                                        <?php echo $post['caption']; ?>
+                                    </b>
+                                </div>
+                            </a>
                         </li>
                     <?php endforeach; ?>
                 </ul>

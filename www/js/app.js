@@ -21,8 +21,8 @@ $(window).load(function () { // makes sure the whole site is loaded
         });
 
         var mySwiper = new Swiper ('.section_instargram .swiper-container', {
-            slidesPerView: 2,
-            spaceBetween: 30,
+            slidesPerView: 4,
+            spaceBetween: 5,
 
             navigation: {
                 nextEl: '.swiper-button-next',

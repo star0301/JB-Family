@@ -208,8 +208,14 @@
 
       <!--INSTAGRAM-->
       <section class="section_instargram section">
+
         <div class="section_center">
+          <a href="//www.instagram.com/queens_porkcutlet/">
+          <img src="../images/home/insta_logo.jpg" alt="" class="logoimg" />
+          </a>
           <h2 class="section_title">INSTARGRAM</h2>
+          <p>왕비돈까스 인스타그램 최신 피드를 확인하세요</p>
+
           <div class="div_instargram">
             <?php
                 require_once( 'instagram_basic_display_api.php' );
@@ -231,20 +237,22 @@
                 <ul class="swiper-wrapper">
                     <?php foreach ( $usersMedia['data'] as $post ) : ?>
                         <li class="swiper-slide">
-                            <a href="//www.instagram.com/queens_porkcutlet/">
                                 <div>
                                     <?php if ( 'IMAGE' == $post['media_type'] || 'CAROUSEL_ALBUM' == $post['media_type']) : ?>
                                         <div class="thumb" style="background:url(<?php echo $post['media_url']; ?>)"></div>
                                     <?php else : ?>
-                                        <video height="600" width="100%" controls>
+                                        <video height="300" width="100%" controls>
                                             <source src="<?php echo $post['media_url']; ?>">
                                         </video>
                                     <?php endif; ?>
                                 </div>
                                 <div>
+                                <!-- POST 게시물 텍스트 영역-->
+                                <!--
                                     <b class="caption">
-                                        <?php echo $post['caption']; ?>
+                                        ?php echo $post['caption']; ?>
                                     </b>
+                                    -->
                                 </div>
                             </a>
                         </li>
@@ -255,7 +263,6 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-scrollbar"></div>
             </div>
-
             <?php else : ?>
                <div class="wait">
                    <img src="../images/home/instargram.jpg" alt="" class="img" />
@@ -268,6 +275,8 @@
                    </a>
                </div>
             <?php endif; ?>
+
+            <!-- 맨 마지막 영역-->
           </div>
 
           <!--          <div class="swiper-container">-->

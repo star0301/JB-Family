@@ -210,9 +210,7 @@
       <section class="section_instargram section">
 
         <div class="section_center">
-          <a href="//www.instagram.com/queens_porkcutlet/">
           <img src="../images/home/insta_logo.jpg" alt="" class="logoimg" />
-          </a>
           <h2 class="section_title">INSTARGRAM</h2>
           <p>왕비돈까스 인스타그램 최신 피드를 확인하세요</p>
 
@@ -236,6 +234,7 @@
            	<div class="swiper-container">
                 <ul class="swiper-wrapper">
                     <?php foreach ( $usersMedia['data'] as $post ) : ?>
+                      <a href="//www.instagram.com/queens_porkcutlet/">
                         <li class="swiper-slide">
                                 <div>
                                     <?php if ( 'IMAGE' == $post['media_type'] || 'CAROUSEL_ALBUM' == $post['media_type']) : ?>

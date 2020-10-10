@@ -21,20 +21,20 @@ $(window).load(function () { // makes sure the whole site is loaded
         });
 
         var mySwiper = new Swiper ('.section_instargram .swiper-container', {
-            slidesPerView: 2,
-            spaceBetween: 30,
+            slidesPerView: 4,
+            spaceBetween: 5,
 
             navigation: {
                 nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                prevEl: '.swiper-button-prev'
             },
             scrollbar: {
                 el: '.swiper-scrollbar',
-                hide: true,
+                hide: true
             },
             breakpoints: {
                 1000: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 10
                 }
             }

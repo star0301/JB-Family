@@ -21,7 +21,7 @@
     padding-right: 40px;
 }
 .section_contact .form .img_area img{
-    width: 100%;
+    width: 70%;
 }
 .section_contact .form .form_area{
     width: 50%;
@@ -32,7 +32,7 @@
 .section_contact .form .form_area .form-group{
     display: block;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .section_contact .form .form_area .form-group .control-label{
     display: block;
@@ -105,8 +105,8 @@
         margin-top: 15px;
     }
     .section_contact .form .img_area img{
-        height: 300px;
-        width: auto;
+        height: auto;
+        width: 100%;
     }
     .section_contact .form .form_area{
         width:100%;

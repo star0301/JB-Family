@@ -328,18 +328,18 @@
               <span class="text">인천광역시 남동구 서창남로 41 광명프라자 114호</span>
             </li>
             <li>
-              <span class="label">CALL</span>
+              <span class="label">가족점 문의</span>
               <span class="text">1577 - 7012</span>
             </li>
           </ul>
           <ul class="major_info company_info">
             <li>
-              <span class="label">대표자</span>
-              <span class="text">안성빈</span>
-            </li>
-            <li>
               <span class="label">사업자등록번호</span>
               <span class="text">397-81-01479</span>
+            </li>
+            <li>
+              <span class="label"></span>
+              <span class="text">(주) JB_Family International F&B</span>
             </li>
           </ul>
           <p class="copyright">

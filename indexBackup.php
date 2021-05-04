@@ -50,30 +50,8 @@
     <p>'왕비돈까스 레스토랑'은 각 도시에 <br> 'Only One: 1개점 운영외 절대 개설해주지 않는'<br>원칙을 갖고 있습니다.</p>
     <p>이것이 브랜드 왕비돈까스의 경영철학 입니다.</p>
     <p>원칙을 지켜가며 '성공'을 약속드립니다.<br><br></p>
-    <button id="popCloseBtn" class="popCloseBtn">close</button>
+    <button id="popCloseBtn">close</button>
   </div>
-
-  <div id="popupDiv2" class="popupDiv">
-    <h2>가 족 점  모 집</h2>
-    <p>가족점 강력 추천지역</p>
-    <p>고양시<br>부천시<br>수원시<br>제주도<br>부산시<br>대구시<br>서울시<br>전주시</p>
-    <p>'왕비돈까스 레스토랑'은 각 도시에 <br> 'Only One: 1개점 운영외 절대 개설해주지 않는'<br>원칙을 갖고 있습니다.</p>
-    <p><b>문의 : 1577-7012 (문자전송) </b><br><br></p>
-    <button id="popCloseBtn2" class="popCloseBtn">close</button>
-  </div>
-
-  <!-- <div id="popupDiv2" class="popupDiv"     style="margin-top: -150px">
-    <h2>공 지 사 항</h2>
-    <p>대한민국 최고의 쇼핑몰 신세계 스타필드 입점 확정</p>
-    <p>신세계 스타필드 부산(명지)점 점주모집</p>
-    <p>2021년 4월 초 오픈예정</p>
-    <p>주소 : 부산 강서구 명지국로6로 168<br>스타필드 시티 1층</p>
-    <p>실 투자금 : 6천 9백만원<br></p>
-    <p><b>가족점문의 1577-7012</b><br><br></p>
-	  <img src="../images/home/popup.png" class="img_popup" alt="popup">
-    <button id="popCloseBtn2" class="popCloseBtn">close</button>
-  </div> -->
-
 
   </div>
 
@@ -91,16 +69,6 @@
         $("#popup_mask").css("display", "none"); //팝업창 뒷배경 display none
         $("#popupDiv").css("display", "none"); //팝업창 display none
         $("body").css("overflow", "auto");//body 스크롤바 생성
-      });
-	  
-	   $("#popupDiv2").css({
-        "top": (($(window).height() - $("#popupDiv").outerHeight()) / 2 + $(window).scrollTop()) + "px",
-        "left": (($(window).width() - $("#popupDiv").outerWidth()) / 2 + $(window).scrollLeft()) + "px"
-        //팝업창을 가운데로 띄우기 위해 현재 화면의 가운데 값과 스크롤 값을 계산하여 팝업창 CSS 설정
-      });
-
-      $("#popCloseBtn2").click(function (event) {
-        $("#popupDiv2").css("display", "none"); //팝업창 display none
       });
 
     });
@@ -242,15 +210,77 @@
       <section class="section_instargram section">
 
         <div class="section_center">
-        <a href="//www.instagram.com/queens_porkcutlet/">
           <img src="../images/home/insta_logo.jpg" alt="" class="logoimg" />
           <h2 class="section_title">INSTARGRAM</h2>
-          <p>로고를 클릭해 왕비돈까스 최신 피드를 확인하세요</p>
+          <p>왕비돈까스 인스타그램 최신 피드를 확인하세요</p>
 
-        <!-- 이 아래부터 날려버림 -->
+          <div class="div_instargram">
+            <?php
+                require_once( 'instagram_basic_display_api.php' );
+                $accessToken = 'IGQVJYRG54T1NxaXNySDJfMU95SkI1Uno0MHpQN1NsVkhqX2pBZAS1lOUhFV0xlQkx2cWtQN3dQWGR3OEFXakZATajY3emFPV0VSMFEwTnlXNWdXakdYUTZAhaVBwY3BsWl9fSF9CSjJGelhfNXREekhkaAZDZD';
+                $params = array(
+                    'get_code' => isset( $_GET['code'] ) ? $_GET['code'] : '',
+                    'access_token' => $accessToken,
+                    'user_id' => '17841407321653863'
+                );
+                $ig = new instagram_basic_display_api( $params );
+            ?>
+            <?php if ( $ig->hasUserAccessToken ) : ?>
+           	<?php $user = $ig->getUser(); ?>
+           	<?php $highlightedPostId = 'MEDIA-ID'; ?>
+           	<?php $usersMedia = $ig->getUsersMedia(); ?>
+
+           	<!-- POST 게시물 -->
+           	<div class="swiper-container">
+                <ul class="swiper-wrapper">
+                  <!-- 여기 바로아래 if문은 공백을 제거해서 에러를 피하기 위함 -->
+                  <?php if(!empty($post)) { ?>
+                    <?php foreach ( $usersMedia['data'] as $post ) : ?>
+                      <a href="//www.instagram.com/queens_porkcutlet/">
+                        <li class="swiper-slide">
+                                <div>
+                                    <?php if ( 'IMAGE' == $post['media_type'] || 'CAROUSEL_ALBUM' == $post['media_type']) : ?>
+                                        <div class="thumb" style="background:url(<?php echo $post['media_url']; ?>)"></div>
+                                    <?php else : ?>
+                                        <video height="300" width="100%" controls>
+                                            <source src="<?php echo $post['media_url']; ?>">
+                                        </video>
+                                    <?php endif; ?>
+                                </div>
+                                <div>
+                                <!-- POST 게시물 텍스트 영역-->
+                                <!--
+                                    <b class="caption">
+                                        ?php echo $post['caption']; ?>
+                                    </b>
+                                    -->
+                                </div>
+                            </a>
+                        </li>
+                      <?php endforeach; ?>
+                                    <?php } //endif ?>
+                </ul>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+            <?php else : ?>
+               <div class="wait">
+                   <img src="../images/home/instargram.jpg" alt="" class="img" />
+                   <p>
+                     <img src="../images/home/icon.png" alt="" class="icon" />
+                     왕비돈까스 공식 인스타그램 서비스 예정중
+                   </p>
+                   <a href="<?php echo $ig->authorizationUrl; ?>">
+                       Authorize w/Instagram
+                   </a>
+               </div>
+            <?php endif; ?>
 
 
             <!-- 맨 마지막 영역-->
+          </div>
 
           <!--          <div class="swiper-container">-->
           <!--            <div class="swiper-wrapper">-->

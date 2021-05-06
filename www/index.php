@@ -53,7 +53,7 @@
     <button id="popCloseBtn" class="popCloseBtn">close</button>
   </div>
 
-  <div id="popupDiv2" class="popupDiv">
+  <div id="popupDiv2" class="popupDiv"  style="background: #FAEBCD">
     <h2>가 족 점  모 집</h2>
     <p>가족점 강력 추천지역</p>
     <p>고양시<br>부천시<br>수원시<br>제주도<br>부산시<br>대구시<br>서울시<br>전주시</p>

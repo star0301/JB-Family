@@ -177,7 +177,7 @@
               <div class="background-img" style="background: url('../images/slideshow/index_slide2.jpg')"></div>
             </div>
             <div class="swiper-slide">
-              <div class="background-img" style="background: url('../images/slideshow/index_slide3.JPG')"></div>
+              <div class="background-img" style="background: url('../images/slideshow/index_slide3.jpg')"></div>
             </div>
           </div>
           <!-- Add Pagination -->
